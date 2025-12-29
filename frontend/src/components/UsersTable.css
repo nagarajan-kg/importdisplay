@@ -1,0 +1,155 @@
+
+.users-container {
+  padding: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #f4f7fa;
+  border-radius: 12px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.users-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.users-header h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #4a90e2;
+  margin: 0;
+}
+
+.users-header p {
+  margin-top: 8px;
+  color: #555;
+}
+
+.users-controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.users-controls input,
+.users-controls select {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-width: 220px;
+  font-size: 14px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+.users-table th {
+  background: #4a90e2;
+  color: #ffffff;
+  padding: 15px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.users-table td {
+  padding: 14px 15px;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 14px;
+  color: #333333;
+}
+
+.users-table tr:hover {
+  background-color: #f1f8ff;
+}
+
+.users-pagination {
+  margin-top: 25px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.users-pagination button {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 6px;
+  background: #4a90e2;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.users-pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .users-header h1 {
+    font-size: 26px;
+  }
+
+  .users-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+
+  .users-table thead {
+    display: none;
+  }
+
+
+  .users-table tr {
+    display: block;
+    background: #ffffff;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    padding: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  }
+  .users-table td {
+    display: block;
+    padding: 12px;
+    border-bottom: none;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+
+  .users-table td::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #555555;
+  }
+
+  .users-table td[data-label="Name"] {
+    background: #f6f6f6;
+  }
+
+  .users-table td[data-label="Email"] {
+    background: #f2f8ff;
+  }
+  .users-table td[data-label="Company"] {
+    background: #f3faf5;
+  }
+  .users-table td strong {
+    font-size: 15px;
+    color: #222222;
+  }
+}
